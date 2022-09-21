@@ -1,0 +1,62 @@
+customer/signup
+customer object:
+
+{
+	"email" : "example@example.com",
+	"firstName" : "Bob",
+	"lastName" : "Doe",
+	"phone" : "123-456-7890",
+	"addresses" : [{
+		"name" : "Home",
+		"street" : "1000 N 4th Street",
+		"apartment" : "101",
+		"country" : "USA" ,
+		"zip" : "52557",
+		"defaultAddress" : "true"
+		}],
+	"password" : "secure-password",
+	"paymentMethods:" : [{
+		"type" : "PayPal",
+		"defaultPaymentMethod" : "true"
+		}]
+}
+
+
+product/save
+Product objects: 
+
+{
+    "productName": "T-Shirts",
+    "category": "Clothing",
+    "stock": "500",
+    "productPrice": "5.00"
+}
+
+{
+    "productName": "Iphone Charger",
+    "category": "Electronics",
+    "stock": "250",
+    "price": "24.99"
+}
+
+{
+    "productName": "Air Fryer",
+    "category": "Kitchen",
+    "stock": "49",
+    "price": "79.99"
+}
+
+
+customer/placeorder
+orderrequest object:
+
+{
+	"customerId" : <get from customer table>,
+	"shippingAddress" : null,
+	"paymentMethodData" : null,
+	"orderLines" : [{
+		"productId" : <pull from product table>
+		"quantity" : "2"
+		"price" : "9.99"
+	}]
+}

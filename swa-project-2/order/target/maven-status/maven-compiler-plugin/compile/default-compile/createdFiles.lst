@@ -1,0 +1,15 @@
+miu\sa\order\model\PaymentMethod.class
+miu\sa\order\model\ShippingAddress.class
+miu\sa\order\util\ServicesEndpoint.class
+miu\sa\order\dto\OrderRequest.class
+miu\sa\order\dto\ApiResponse.class
+miu\sa\order\model\OrderLine.class
+miu\sa\order\dto\Item.class
+miu\sa\order\util\ServicesURL.class
+miu\sa\order\dto\PaymentRequest.class
+miu\sa\order\dto\ProductCheckRequest.class
+miu\sa\order\controllers\OrderController.class
+miu\sa\order\dto\ShippingRequest.class
+miu\sa\order\repository\OrderRepository.class
+miu\sa\order\OrderApplication.class
+miu\sa\order\model\Order.class

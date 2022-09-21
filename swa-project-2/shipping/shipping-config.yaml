@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipping-config
+data:
+  shipping_url: shipping-service/shipping
+  shipping_name: shipping

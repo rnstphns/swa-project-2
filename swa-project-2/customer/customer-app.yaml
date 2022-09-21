@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-app-deployment
+  labels:
+    app: customer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer
+  template:
+    metadata:
+      labels:
+        app: customer
+    spec:
+      containers:
+        - name: customer
+          image: rnstphns/customer-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MYSQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: customer-secret
+                  key: customer_user
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: customer-secret
+                  key: customer_password
+            - name: DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: customer-config
+                  key: customer_url
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef: 
+                  name: customer-config
+                  key: customer_name
+          resources:
+            limits:
+             memory: "512Mi"
+             cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-app-service
+spec:
+  type: NodePort
+  selector:
+    app: customer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30300

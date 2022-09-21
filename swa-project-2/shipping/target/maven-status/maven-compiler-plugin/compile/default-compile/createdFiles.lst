@@ -1,0 +1,8 @@
+miu\sa\shipping\controller\ShippingController.class
+miu\sa\shipping\model\Item.class
+miu\sa\shipping\ShippingApplication.class
+miu\sa\shipping\repository\ShippingRepository.class
+miu\sa\shipping\dto\ItemRequest.class
+miu\sa\shipping\model\Shipment.class
+miu\sa\shipping\dto\ApiResponse.class
+miu\sa\shipping\dto\ShippingRequest.class

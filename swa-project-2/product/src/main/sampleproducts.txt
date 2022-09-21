@@ -1,0 +1,46 @@
+{
+    "productId": "001",
+    "productName": "T-Shirts",
+    "productCategory": "Clothing",
+    "productPrice": "5.00",
+    "numInStock": "500",
+    "environment": null
+}
+
+{
+    "productId": "002",
+    "productName": "Iphone Charger",
+    "productCategory": "Electronics",
+    "productPrice": "24.99",
+    "numInStock": "250",
+    "environment": null
+}
+
+{
+    "productId": "003",
+    "productName": "Air Fryer",
+    "productCategory": "Kitchen",
+    "productPrice": "79.99",
+    "numInStock": "49",
+    "environment": null
+}
+
+#Order for 5 tshirts and an iphone charger
+{
+    "items" : [{
+        "id":"1",
+        "numOfItems":"5"
+    }, {
+        "id":"2",
+        "numOfItems":"1"
+    }]
+}
+
+#order to test item out of stock
+
+{
+    "items" : [{
+        "id":"3",
+        "numOfItems":"500"
+    }]
+}
